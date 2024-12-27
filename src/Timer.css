@@ -1,0 +1,30 @@
+.timer-container {
+    margin: 20px 0;
+  }
+  
+  .analog-timer {
+    width: 100px;
+    height: 100px;
+    border: 10px solid #007BFF;
+    border-radius: 50%;
+    position: relative;
+    margin: 20px auto;
+  }
+  
+  .hand {
+    position: absolute;
+    background-color: #007BFF;
+    width: 50%;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0% 50%;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .digital-timer {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+  }
+  

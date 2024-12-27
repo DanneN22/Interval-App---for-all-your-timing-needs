@@ -1,0 +1,120 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.timer-container {
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+input {
+    padding: 5px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    width: 80px;
+}
+
+.digital-timer h2 {
+    font-size: 48px;
+    color: #00bcd4;
+    font-weight: bold;
+}
+
+.analog-timer {
+    width: 200px;
+    height: 200px;
+    border: 8px solid #00bcd4;
+    border-radius: 50%;
+    position: relative;
+    margin: 20px auto;
+    background: none;
+}
+
+.hand {
+    background-color: #00bcd4;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    transition: transform 0.5s linear;
+}
+
+.hour {
+    width: 6px;
+    height: 40px;
+    margin-left: -3px;
+}
+
+.minute {
+    width: 4px;
+    height: 60px;
+    margin-left: -2px;
+}
+
+.second {
+    width: 2px;
+    height: 80px;
+    margin-left: -1px;
+    background-color: #ff5722; /* Contrast for seconds */
+}
+
+.center-circle {
+    width: 10px;
+    height: 10px;
+    background-color: #00bcd4;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.visual-timer {
+    position: relative;
+    margin: 20px auto;
+}
+
+.text-timer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.circle-svg {
+    transform: rotate(-90deg); /* Start at the top */
+}
+
+button {
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin: 5px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #0195a6;
+}.analog-timer,
+.digital-timer,
+.visual-timer {
+    display: none; /* Döljer alla timrar till att börja med */
+}

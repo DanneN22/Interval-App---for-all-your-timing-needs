@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="timer-container">
+        <h1>Timer App</h1>
+
+        <!-- Input för att ställa in minuter -->
+        <input type="number" id="inputMinutes" placeholder="Ange minuter" min="1">
+        
+        <!-- Växlingsknappar -->
+        <div class="view-buttons">
+            <button id="showDigitalBtn">Visa Digital Timer</button>
+            <button id="showAnalogBtn">Visa Analog Timer</button>
+            <button id="showVisualBtn">Visa Visuell Timer</button>
+            <button id="showTextBtn">Visa Text Timer</button>
+        </div>
+        
+        <!-- Digital Timer -->
+        <div class="digital-timer" id="digitalTimer">
+            <h2 id="digitalDisplay">00:00:00</h2>
+        </div>
+
+        <!-- Analog Timer -->
+        <div class="analog-timer" id="analogTimer">
+            <div class="hand hour" id="hourHand"></div>
+            <div class="hand minute" id="minuteHand"></div>
+            <div class="hand second" id="secondHand"></div>
+            <div class="center-circle"></div>
+        </div>
+
+        <!-- Visual Timer -->
+        <div class="visual-timer" id="visualTimer" style="display:none;">
+            <svg height="200" width="200" class="circle-svg">
+                <circle cx="100" cy="100" r="80" stroke="#e0e0e0" stroke-width="10" fill="none" />
+                <circle cx="100" cy="100" r="80" stroke="#00bcd4" stroke-width="10" fill="none" id="progressCircle" />
+            </svg>
+            <div class="text-timer" id="textTimer">Timer: 60 s</div>
+        </div>
+
+        <div class="buttons">
+            <button id="startBtn">Start</button>
+            <button id="stopBtn">Stop</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
